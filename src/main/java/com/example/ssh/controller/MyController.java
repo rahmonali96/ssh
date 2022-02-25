@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
     @GetMapping
     public String test() {
-        return "auto deploy";
+        return "auto deploy changed";
     }
 }
