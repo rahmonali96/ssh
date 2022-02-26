@@ -8,7 +8,9 @@ import java.util.Arrays;
 @Service
 public class MyService {
     public ListNode makeFromString(String s) {
-        return make(Arrays.stream(s.split("")).mapToInt(Integer::parseInt).toArray(), new ListNode(), 0);
+        return make(Arrays.stream(s.split(""))
+                .mapToInt(Integer::parseInt)
+                .toArray(), new ListNode(), 0);
     }
     private ListNode make(int[] args, ListNode listNode, int x) {
         listNode.val = args[x];
@@ -18,4 +20,16 @@ public class MyService {
         }
         return listNode;
     }
+
+    public int numberOfNodes(ListNode listNode) {
+        int count = 1;
+        while (listNode.next != null) {
+            count++;
+        }
+        return count;
+    }
+
+//    public int[] calculate(ListNode listNode) {
+//
+//    }
 }
