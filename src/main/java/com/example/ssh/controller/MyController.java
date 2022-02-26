@@ -19,7 +19,7 @@ public class MyController {
         return myService.makeFromString(name);
     }
 
-    @PostMapping("/node")
+    @PostMapping(value = "/node")
     public int calc(@RequestBody ListNode listNode){
         return myService.numberOfNodes(listNode);
     }
